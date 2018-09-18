@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity
     //TODO: FUTURE:Opcje językowe
     //TODO: FUTURE:Opcje wyboru motywów
 
+    //test git commit
+
     FloatingActionMenu fab_menu;
     FloatingActionButton fab_menu_button1, fab_menu_button2, fab_menu_button3;
     Button btn_refuel_more, btn_costs_more;
