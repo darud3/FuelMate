@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Pokaż notkę"
+        android:id="@+id/costList_item_note"/>
+    <item
+        android:title="Usuń"
+        android:id="@+id/costList_item_delete"/>
+    <item
+        android:title="Edytuj"
+        android:id="@+id/costlList_item_edit"
+        />
+</menu>

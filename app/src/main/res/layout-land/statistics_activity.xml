@@ -1,0 +1,1556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundPrimary">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/statistics_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/statistic_activ_toolbar_title"
+                        android:textSize="18sp"
+                        android:paddingTop="5dp"
+                        android:textColor="@android:color/white"
+                        android:text="@string/statistic_activity_title_pl"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/statistic_car_spinner"
+                        android:gravity="start"
+                        android:popupBackground="@color/white"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <!-- OGÓLNE -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/statistic_layout_margin"
+            android:orientation="horizontal"
+            android:background="@color/itemPrimary"
+            android:elevation="5dp">
+
+            <!-- LEWA STRONA -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Ogólne"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Licznik"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Cały zliczony dystans"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Całkowita ilość paliwa"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Całkowity koszt paliwa"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Wydatki na 'koszt'"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Wszystkie tankowania"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Wszystkie koszty"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Całkowity koszt"/>
+            </LinearLayout>
+
+            <!-- PRAWA STRONA -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Ogólne"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:visibility="invisible"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_ov_kmCounter"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_ov_kmCounter_totalCount"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_ov_fuel_totalCount"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_ov_fuelCost_totalCount"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_ov_costCosts_totalCount"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_ov_refuel_quantity"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_ov_cost_quantity"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_ov_whole_cash_cost"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--TANKOWANIE-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/statistic_layout_margin"
+            android:orientation="horizontal"
+            android:background="@color/itemPrimary"
+            android:elevation="5dp">
+
+            <!-- LEWA STRONA -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tankowania"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Ten miesiąc"
+                    android:id="@+id/textView2" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Poprzedni miesiąc"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Ten rok"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Poprzedni rok"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Największe"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Najmniejsze"/>
+
+            </LinearLayout>
+
+            <!-- PRAWA STRONA -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Ogólne"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:visibility="invisible"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_rf_this_mth_quantity"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_rf_prev_mth_quantity"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_rf_this_yr_quantity"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_rf_prev_yr_quantity"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_rf_biggest"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_rf_smallest"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--PALIWO-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/statistic_layout_margin"
+            android:orientation="horizontal"
+            android:background="@color/itemPrimary"
+            android:elevation="5dp">
+
+            <!-- LEWA STRONA -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Paliwo"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Ten miesiąc"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Poprzedni miesiąc"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Ten rok"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Poprzedni rok"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Ostatnie 12 miesięcy"/>
+
+            </LinearLayout>
+
+            <!-- PRAWA STRONA -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Ogólne"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:visibility="invisible"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_fl_this_mth"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_fl_prev_mth"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_fl_this_yr"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_fl_prev_yr"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_fl_last_12mth"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--WYDATKI CALOSC-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/statistic_layout_margin"
+            android:orientation="horizontal"
+            android:background="@color/itemPrimary"
+            android:elevation="5dp">
+
+            <!-- LEWA STRONA -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wydatki (Całość)"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Wszystkie zliczone"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Ten miesiąc"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Poprzedni miesiąc"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Ten rok"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Poprzedni rok"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Ostatnie 12 miesięcy"/>
+            </LinearLayout>
+
+            <!-- PRAWA STRONA -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Ogólne"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:visibility="invisible"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_ca_whole_cash_cost"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_ca_this_mth"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_ca_prev_mth"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_ca_this_yr" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_ca_prev_yr"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_ca_last_12mth"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--WYDATKI PALIWO-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/statistic_layout_margin"
+            android:orientation="horizontal"
+            android:background="@color/itemPrimary"
+            android:elevation="5dp">
+
+            <!-- LEWA STRONA -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wydatki (paliwo)"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Ten miesiąc"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Poprzedni miesiąc"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Ten rok"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Poprzedni rok"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Ostatnie 12 miesięcy"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Największy rachunek"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Najmniejszy rachunek"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Największa cena za litr"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Najmniejsza cena za litr"/>
+
+            </LinearLayout>
+
+            <!-- PRAWA STRONA -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Ogólne"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:visibility="invisible"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_cf_this_mth"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_cf_prev_mth"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_cf_this_yr"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_cf_prev_yr"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stat_cf_last_12_mth"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_cf_highest_bill"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_cf_lowest_bill"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_cf_highest_fuel_price"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_cf_lowest_fuel_price"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--WYDATKI KOSZTY-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/statistic_layout_margin"
+            android:orientation="horizontal"
+            android:background="@color/itemPrimary"
+            android:elevation="5dp">
+
+            <!-- LEWA STRONA -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wydatki (koszty)"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Ten miesiąc"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Poprzedni miesiąc"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Ten rok"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Poprzedni rok"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Ostatnie 12 miesięcy"/>
+
+            </LinearLayout>
+
+            <!-- PRAWA STRONA -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Ogólne"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:visibility="invisible"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_cc_this_mth"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_cc_prev_mth"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_cc_this_yr"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_cc_prev_yr"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_cc_last_12_mth"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--SREDNIE-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/statistic_layout_margin"
+            android:orientation="horizontal"
+            android:background="@color/itemPrimary"
+            android:elevation="5dp">
+
+            <!-- LEWA STRONA -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Średnie"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Koszt dzienny paliwa"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Koszt miesięczny paliwa"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Śr. dzienny przebieg"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Śr. miesięczny przebieg"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Śr. spalanie"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Śr. tankowanie"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:text="Śr. rachunek za tankow."/>
+
+            </LinearLayout>
+
+            <!-- PRAWA STRONA -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Ogólne"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:visibility="invisible"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_avg_dialy_cost"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_avg_monthly_cost"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_avg_dialy_mileage"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_avg_monthly_mileage"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_avg_fuel_use"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_avg_refuel_cap"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/statistic_separate_line" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="right"
+                    android:text=" "
+                    android:textSize="@dimen/statistic_activity_normal_text_size"
+                    android:id="@+id/stats_avg_refuel_cost"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

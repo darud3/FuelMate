@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:id="@+id/lv_refuel_left_bar_layout"
+            android:background="@color/colorPrimary">
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="27"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lv_refuel_data_text"
+                android:gravity="left"
+                android:paddingTop="@dimen/refuel_list_item_padding_top"
+                android:paddingLeft="@dimen/refuel_list_item_padding_left_right"
+                android:textSize="@dimen/refuel_list_item_text_size2"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="13-04-2016"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lv_refuel_cost_text"
+                android:paddingLeft="@dimen/refuel_list_item_padding_left_right"
+                android:textSize="@dimen/refuel_list_item_text_size1"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="172.29 zł"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lv_refuel_fuel_amount_text"
+                android:paddingLeft="@dimen/refuel_list_item_padding_left_right"
+                android:textSize="@dimen/refuel_list_item_text_size1"
+                android:text="40.12 l"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lv_refuel_fuel_price_text"
+                android:paddingLeft="@dimen/refuel_list_item_padding_left_right"
+                android:textSize="@dimen/refuel_list_item_text_size1"
+                android:text="4.22 zł/l"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lv_refuel_km_counter_text"
+                android:paddingTop="@dimen/refuel_list_item_padding_top"
+                android:paddingRight="@dimen/refuel_list_item_padding_left_right"
+                android:gravity="right"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/refuel_list_item_text_size2"
+                android:text="258500 km"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lv_refuel_km_diff_text"
+                android:gravity="right"
+                android:paddingRight="@dimen/refuel_list_item_padding_left_right"
+                android:textSize="@dimen/refuel_list_item_text_size1"
+                android:text="+ 456 km"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lv_refuel_fullx_text"
+                android:layout_gravity="right"
+                android:paddingRight="@dimen/refuel_list_item_padding_left_right"
+                android:textSize="@dimen/refuel_list_item_text_size1"
+                android:text="Pełne"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lv_refuel_fuel_usage_text"
+                android:layout_gravity="right"
+                android:paddingRight="@dimen/refuel_list_item_padding_left_right"
+                android:textSize="@dimen/refuel_list_item_text_size1"
+                android:text="8.5 l/100km"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

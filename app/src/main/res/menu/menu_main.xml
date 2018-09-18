@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.pietrzyk.sqlite1.MainActivity">
+<!--
+    <item
+        android:id="@+id/action_refuel_list"
+        android:orderInCategory="100"
+        android:title="Dziennik tankowań"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_add_refuel"
+        android:orderInCategory="200"
+        android:title="Nowe tankowanie"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_cost_list"
+        android:orderInCategory="300"
+        android:title="Dziennik kosztów"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_add_cost"
+        android:orderInCategory="300"
+        android:title="Nowy koszt"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="300"
+        android:title="Ustawienia"
+        app:showAsAction="never"/>
+
+        -->
+
+</menu>

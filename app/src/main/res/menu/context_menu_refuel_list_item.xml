@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:title="Notatka"
+        android:id="@+id/refuelList_item_note"/>
+
+    <item
+        android:title="Edytuj"
+        android:id="@+id/refuelList_item_edit"/>
+    <item
+        android:title="Usuń"
+        android:id="@+id/refuelList_item_delete"/>
+</menu>

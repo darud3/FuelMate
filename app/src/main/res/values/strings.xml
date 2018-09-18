@@ -1,0 +1,171 @@
+<resources>
+    <string name="app_name">FuelMate</string>
+
+    <!-- MainActivity -->
+    <string name="fab_menu_btn_PL">Tankowanie</string>
+    <string name="fab_menu_btn2_PL">Koszt</string>
+    <string name="fab_menu_btn3_PL">Przypomnienie</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_update_refuel">UpdateRefuelActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_new_cost">NewCostActivity</string>
+    <string name="statistic_empty_cursor_error_PL">Brak danych</string>
+
+
+    <string name="PL_main_activity_days_since_last_refuel">dni temu</string>
+
+    <string-array name="cost_types">
+        <item>Serwis</item>
+        <item>Parking</item>
+        <item>Przegląd</item>
+        <item>Ubezpieczenie</item>
+        <item>Mandat</item>
+        <item>Opłata za przejazd</item>
+        <item>Inne</item>
+    </string-array>
+
+    <string-array name="fuel_type">
+        <item>95</item>
+        <item>98</item>
+        <item>ON</item>
+        <item>LPG</item>
+        <item>bioON</item>
+    </string-array>
+
+    <string-array name="fuel_units">
+        <item>Litry</item>
+        <item>Galon UK</item>
+        <item>Galon US</item>
+    </string-array>
+
+    <string-array name="fuel_usage_units">
+        <item>l/100km</item>
+        <item>mpg (UK)</item>
+        <item>mpg (US)</item>
+    </string-array>
+
+    <string-array name="dist_units">
+        <item>Kilometry</item>
+        <item>Mile</item>
+    </string-array>
+
+    <string name="title_activity_cost_list">CostListActivity</string>
+    <string name="title_activity_cost_update">CostUpdateActivity</string>
+    <string name="title_activity_car_list">CarListActivity</string>
+    <string name="title_activity_statistics">StatisticsActivity</string>
+    <string name="title_activity_charts_acivity">ChartsAcivity</string>
+    <string name="title_activity_chart_line_activity">ChartsAcivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="view_pager_fuel_usage_chart_tab_PL">ZUŻYCIE PALIWA</string>
+    <string name="view_pager_monthly_costs_chart_tab_PL">WYDATKI MIESIĘCZNE</string>
+    <string name="view_pager_fuel_price_chart_tab_PL">CENA PALIWA</string>
+    <string name="empty" />
+
+    <!-- RefuelNewActivity -->
+    <string name="refuel_new_update_editext_empty_error_PL">To pole nie może być puste!</string>
+    <string name="refuel_new_update_editext_kmcounter_too_low_PL">Podałeś mniejszy licznik niż poprzednio!</string>
+    <string name="refuel_new_tiitle_pl">Dodaj tankowanie</string>
+
+    <!-- RefuelUpdateActivity -->
+    <string name="refuel_update_tiitle_pl">Edytuj tankowanie</string>
+
+    <!-- RefuelListActivity -->
+    <string name="refuel_list_tiitle_pl">Dziennik tankowań</string>
+    <string name="refuel_list_empty_list_text1_pl">Brak wpisów w dzienniku tankowań dla tego pojazdu</string>
+    <string name="refuel_list_empty_list_text2_pl">Dodaj wpisy do dziennika</string>
+    <string name="PL_refuel_list_item_fuel_full">Pełne</string>
+    <string name="PL_refuel_list_item_fuel_NOTfull">Częściowe</string>
+
+    <!-- CostNewActivity -->
+    <string name="cost_new_title_pl">Dodaj koszt</string>
+    <string name="cost_new_update_editext_empty_error_PL">To pole nie może być puste!</string>
+
+    <!-- CostUpdateActivity -->
+    <string name="cost_update_title_pl">Edytuj koszt</string>
+
+    <!-- CostListActivity -->
+    <string name="cost_list_title_pl">Dziennik kosztów</string>
+    <string name="cost_list_empty_list_text1_pl">Brak wpisów w dzienniku kosztów dla tego pojazdu </string>
+    <string name="cost_list_empty_list_text2_pl">Dodaj wpisy do dziennika</string>
+
+    <!-- CarListActivity -->
+    <string name="car_list_activity_title_pl">Pojazdy</string>
+    <string name="car_list_empty_list_text1_pl">Nie dodałeś jeszcze żadnego pojazdu</string>
+    <string name="car_list_empty_list_text2_pl">Dodaj pojazd aby móc kożystać z aplikacji</string>
+
+    <!-- CarNewActivity -->
+    <string name="car_new_activity_title_pl">Dodaj pojazd</string>
+    <string name="car_new_update_edittext_empty_error_pl">To pole nie może być puste!</string>
+    <string name="car_new_update_reg_num_exists_PL">Pojazd z takim nr rejestracji już istnieje!</string>
+    <string name="car_new_update_name_exists_PL">Pojazd o takiej nazwie już istnieje!</string>
+
+    <!-- CarUpdateActivity -->
+    <string name="car_update_activity_title_pl">Edytuj pojazd</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_activity_main_settings_pl">Ustawienia główne</string>
+    <string name="settings_activity_currency_pl">Waluta</string>
+    <string name="settings_activity_currency_dialog_title_pl">Wybierz walutę</string>
+    <string name="settings_activity_distance_units_pl">Jednostka odległości</string>
+    <string name="settings_activity_distance_dialog_title_pl">Wybierz jednostkę odległości</string>
+    <string name="settings_activity_fuel_units_pl">Jednostki spalania</string>
+    <string name="settings_activity_fuel_units_dialog_title_pl">Wybierz jednostkę spalania</string>
+    <string name="settings_activity_fuel_cap_pl">Jednostki objętości</string>
+
+    <string name="settings_uk_gal_short">gal(uk)</string>
+    <string name="settings_us_gal_short">gal(us)</string>
+
+    <string-array name="settings_activity_currency_array">
+        <item>PLN</item>
+        <item>EUR</item>
+        <item>USD</item>
+        <item>GBP</item>
+        <item>CZK</item>
+    </string-array>
+
+    <string-array name="settings_activity_distance_array">
+        <item>Kilometry</item>
+        <item>Mile</item>
+    </string-array>
+
+    <string-array name="settings_activity_fuel_usage_array">
+        <item>l/100km</item>
+        <item>mpg (UK)</item>
+        <item>mpg (US)</item>
+    </string-array>
+
+    <string-array name="settings_activity_fuel_cap_array">
+        <item>Litry</item>
+        <item>Galony (UK)</item>
+        <item>Galony (US)</item>
+    </string-array>
+
+    <!-- StatisticActivity -->
+    <string name="statistic_activity_title_pl">Statystyki</string>
+
+    <!-- ChartsActivity -->
+    <string name="charts_activity_title_pl">Wykresy</string>
+
+    <!-- ReminderNewActivity -->
+    <string name="reminder_new_activity_title_pl">Przypomnienie</string>
+    <string-array name="reminder_type">
+        <item>Przegląd</item>
+        <item>Ubezpieczenie</item>
+        <item>Mandat</item>
+        <item>Serwis</item>
+        <item>Parking</item>
+        <item>Opłata za przejazd</item>
+        <item>Inne</item>
+    </string-array>
+
+    <!-- ReminderListActivity -->
+    <string name="reminder_list_activity_title_pl">Lista przypomnień</string>
+    <string name="reminder_list_view_empty_text1_pl">Brak ustawionych powiadomień</string>
+    <string name="reminder_list_view_empty_text2_pl">Dodaj powiadomienie</string>
+
+
+</resources>

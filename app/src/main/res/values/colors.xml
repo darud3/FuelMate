@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="very_light_gray">#EEEEEE</color>
+    <color name="light_gray">#E0E0E0</color>
+    <color name="gray">#BDBDBD</color>
+    <color name="welcome_screen">#2F6378</color>
+    <color name="welcome_screen_nav_bar">#2A5769</color>
+
+    <!-- UI Colors -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="backgroundPrimary">#FAFAFA</color>
+    <!-- /UI Colors -->
+
+    <color name="itemPrimary">#FFFFFF</color>
+
+    <color name="fabDefault">#DA3C2F</color>
+
+    <color name="spinnerDropBackground">#424242</color>
+
+    <color name="statistic_separate_line">#E0E0E0</color>
+    <color name="statistic_separate_darker_line">#424242</color>
+
+    <color name="chartRed">#ff0000</color>
+
+    <color name="textHintGrayLight">#E0E0E0</color>
+    <color name="textHintGrayDarker">#BDBDBD</color>
+</resources>

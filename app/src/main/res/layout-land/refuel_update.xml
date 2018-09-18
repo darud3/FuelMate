@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundPrimary"
+    android:baselineAligned="false">
+
+    <!-- TOOLBAR -->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/refuel_update_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:title="Dodaj"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+    </android.support.design.widget.AppBarLayout>
+    <!-- /TOOLBAR -->
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <!--android:background="@color/itemPrimary" -->
+                <!-- android:elevation="2dp" robi CIEN!!!!-->
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_counter_black_24dp"
+                        android:layout_marginTop="16dp"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_local_gas_station_black_24dp"
+                        android:layout_marginTop="13dp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_attach_money_black_24dp"
+                        android:layout_marginTop="13dp"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_cash_multiple_black_24dp"
+                        android:layout_marginTop="13dp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_calendar_black_24dp"
+                        android:layout_marginTop="13dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent">
+
+                    <!-- TEKST -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Licznik"
+                        android:textSize="@dimen/refuel_new_update_text_size"
+                        android:id="@+id/Update_Refuel_KmCounter_Text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Zatankowano"
+                        android:textSize="@dimen/refuel_new_update_text_size"
+                        android:id="@+id/Update_Refuel_FuelAmount_Text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Cena paliwa"
+                        android:textSize="@dimen/refuel_new_update_text_size"
+                        android:id="@+id/Update_Refuel_FuelPrice_Text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Wydana kwota"
+                        android:textSize="@dimen/refuel_new_update_text_size"
+                        android:id="@+id/Update_Refuel_CashSpend_Text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:paddingBottom="15dp"
+                        android:text="Data"
+                        android:textSize="@dimen/refuel_new_update_text_size"
+                        android:id="@+id/Update_Refuel_Date_Text" />
+
+                </LinearLayout>
+
+                <!-- Wpisywanie -->
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/refuel_new_padding_left_right"
+                        android:gravity="right"
+                        android:id="@+id/Update_Refuel_KmCounter_Input"
+                        android:inputType="number"
+                        android:textSize="@dimen/refuel_new_update_text_size"
+                        android:maxLength="7"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/refuel_new_padding_left_right"
+                        android:gravity="right"
+                        android:id="@+id/Update_Refuel_FuelAmount_Input"
+                        android:hint="0.00l"
+                        android:textSize="@dimen/refuel_new_update_text_size"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/refuel_new_padding_left_right"
+                        android:gravity="right"
+                        android:id="@+id/Update_Refuel_FuelPrice_Input"
+                        android:hint="0.00zł/l"
+                        android:textSize="@dimen/refuel_new_update_text_size"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/refuel_new_padding_left_right"
+                        android:gravity="right"
+                        android:id="@+id/Update_Refuel_CashSpend_Input"
+                        android:hint="0.00zł"
+                        android:textSize="@dimen/refuel_new_update_text_size"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/refuel_new_padding_left_right"
+                        android:gravity="right"
+                        android:id="@+id/Update_Refuel_Date_Input"
+                        android:textSize="@dimen/refuel_new_update_text_size"
+                        android:inputType="date" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/statistic_separate_line" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <!--android:background="@color/itemPrimary" -->
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/Update_Refuel_FuelFull_Text"
+                            android:layout_marginLeft="@dimen/refuel_new_padding_left_right"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textSize="@dimen/refuel_new_update_text_size"
+                            android:text="Tankowanie pełne"/>
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/Update_Refuel_FuelMissed_Text"
+                            android:paddingTop="5dp"
+                            android:layout_marginLeft="@dimen/refuel_new_padding_left_right"
+                            android:paddingBottom="10dp"
+                            android:textSize="@dimen/refuel_new_update_text_size"
+                            android:text="Poprzednie pomin."/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/Update_Refuel_FuelFull_CheckBox"
+                            android:checked="true"
+                            android:layout_marginTop="4dp"/>
+
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/Update_Refuel_FuelMissed_CheckBox" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/statistic_separate_line" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="95dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_note_black_24dp"
+                        android:layout_marginTop="8dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Notatka"
+                        android:paddingTop="8dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="@dimen/cost_new_update_text_size"
+                        android:id="@+id/Update_Refuel_Note_Text" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="@dimen/refuel_new_padding_left_right"
+                        android:inputType="textMultiLine"
+                        android:textSize="@dimen/cost_new_update_text_size"
+                        android:id="@+id/Update_Refuel_Note_Input" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

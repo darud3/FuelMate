@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.pietrzyk.sqlite1.ChartsAcivity">
+    <!--
+    <item
+        android:id="@+id/charts_activ_car_spinner"
+        android:title="ChartsActivCarSpinner"
+        app:actionViewClass="android.widget.Spinner"
+        app:showAsAction="always"/>
+        -->
+</menu>

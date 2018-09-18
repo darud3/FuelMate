@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundPrimary">
+
+        <!-- TOOLBAR -->
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/car_update_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+        <!-- TOOLBAR -->
+
+        <!-- PIERWSZY KWADRAT -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/car_new_update_padding_left_right"
+                android:layout_marginLeft="@dimen/car_new_update_padding_left_right"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/car_new_update_text_size"
+                    android:id="@+id/UpdateCar_Name_Input"
+                    android:hint="Nazwa"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/car_new_update_padding_left_right"
+                android:layout_marginLeft="@dimen/car_new_update_padding_left_right">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/car_new_update_text_size"
+                    android:id="@+id/UpdateCar_Reg_Num_Input"
+                    android:hint="Numer rejestracyjny"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+        <!-- PIERWSZY KWADRAT -->
+
+        <!-- DRUGI KWADRAT -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/UpdateCar_Fuel_Type_Text"
+                    android:paddingLeft="18dp"
+                    android:paddingTop="14dp"
+                    android:textSize="@dimen/car_new_update_text_size"
+                    android:text="Rodzaj paliwa"/>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/UpdateCar_Fuel_Type_Spinner"
+                    android:paddingLeft="@dimen/car_new_update_padding_left_right"
+                    android:paddingRight="@dimen/car_new_update_padding_left_right"
+                    android:textSize="@dimen/car_new_update_text_size"
+                    android:gravity="right" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- DRUGI KWADRAT -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/statistic_separate_line" />
+
+        <!-- TRZECI KWADRAT -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Opcjonalne"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:textSize="@dimen/car_new_update_text_size"
+                android:textColor="@color/black"
+                android:id="@+id/textView8" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/car_new_update_padding_left_right"
+                android:layout_marginLeft="@dimen/car_new_update_padding_left_right">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/UpdateCar_Brand_Input"
+                    android:textSize="@dimen/car_new_update_text_size"
+                    android:hint="Marka"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/car_new_update_padding_left_right"
+                android:layout_marginLeft="@dimen/car_new_update_padding_left_right">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/UpdateCar_Model_Input"
+                    android:textSize="@dimen/car_new_update_text_size"
+                    android:hint="Model"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/car_new_update_padding_left_right"
+                android:layout_marginLeft="@dimen/car_new_update_padding_left_right">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/car_new_update_text_size"
+                    android:id="@+id/UpdateCar_Mfg_Date_Input"
+                    android:inputType="number"
+                    android:hint="Rok produkcji"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/car_new_update_padding_left_right"
+                android:layout_marginLeft="@dimen/car_new_update_padding_left_right">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/car_new_update_text_size"
+                    android:id="@+id/UpdateCar_Engine_Cap_Input"
+                    android:inputType="number"
+                    android:hint="Pojemność silnika"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/car_new_update_padding_left_right"
+                android:layout_marginLeft="@dimen/car_new_update_padding_left_right">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/car_new_update_text_size"
+                    android:id="@+id/UpdateCar_Start_Counter_Input"
+                    android:inputType="number"
+                    android:hint="Licznik startowy"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/car_new_update_padding_left_right"
+                android:layout_marginLeft="@dimen/car_new_update_padding_left_right">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/car_new_update_text_size"
+                    android:id="@+id/UpdateCar_Note_Input"
+                    android:inputType="textMultiLine"
+                    android:hint="Notatka"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+        <!-- TRZECI KWADRAT -->
+
+    </LinearLayout>
+</ScrollView>

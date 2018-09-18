@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:fab="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        tools:context="com.example.pietrzyk.sqlite1.MainActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/main_activ_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/main_activ_toolbar_title"
+                        android:textSize="18sp"
+                        android:paddingTop="5dp"
+                        android:textColor="@android:color/white"
+                        android:text="@string/app_name"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/main_activ_car_spinner"
+                        android:gravity="start"
+                        android:popupBackground="@color/white"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            fab:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context="com.example.pietrzyk.sqlite1.MainActivity" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Ostatnie tankowanie"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:textSize="@dimen/main_activity_title_tab_txt"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--
+                android:elevation="5dp"
+                android:background="@color/itemPrimary"
+                -->
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/main_activity_data_in_tab_txt"
+                        android:paddingLeft="16dp"
+                        android:text="Średnie spalanie"
+                        android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                        android:gravity="left"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/main_activity_data_in_tab_txt"
+                        android:paddingLeft="16dp"
+                        android:text="Ostatnie spalanie"
+                        android:gravity="left"
+                        android:paddingTop="@dimen/main_activity_tv_padding_top"
+                        android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                        android:id="@+id/textView4" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/main_activity_data_in_tab_txt"
+                        android:paddingLeft="16dp"
+                        android:text="Data tankowania"
+                        android:paddingTop="@dimen/main_activity_tv_padding_top"
+                        android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                        android:gravity="left"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/main_activity_data_in_tab_txt"
+                        android:paddingLeft="16dp"
+                        android:text=""
+                        android:paddingTop="@dimen/main_activity_tv_padding_top"
+                        android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                        android:gravity="left"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/statistic_separate_line" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/main_activity_data_in_tab_txt"
+                        android:paddingRight="16dp"
+                        android:text="xx l/100km"
+                        android:gravity="right"
+                        android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                        android:id="@+id/main_activ_avg_fuel_usage"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/main_activity_data_in_tab_txt"
+                        android:paddingRight="16dp"
+                        android:text="xx l/100km"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/main_activity_tv_padding_top"
+                        android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                        android:id="@+id/main_activ_last_fuel_usage"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/main_activity_data_in_tab_txt"
+                        android:paddingRight="16dp"
+                        android:text="2016-10-10"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/main_activity_tv_padding_top"
+                        android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                        android:id="@+id/main_activ_last_refuel_date"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/main_activity_data_in_tab_txt"
+                        android:paddingRight="16dp"
+                        android:text="26 dni temu"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/main_activity_tv_padding_top"
+                        android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                        android:id="@+id/main_activ_day_since_last_refuel"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/statistic_separate_line" />
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Więcej"
+                android:textStyle="bold"
+                android:textSize="@dimen/main_activity_button_txt"
+                android:id="@+id/main_activ_refuel_button"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_gravity="left"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                fab:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:context="com.example.pietrzyk.sqlite1.MainActivity" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Koszty"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+
+                        android:textSize="@dimen/main_activity_title_tab_txt"
+                        android:id="@+id/textView6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--
+                    android:elevation="5dp"
+                    android:background="@color/itemPrimary"
+                    -->
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/main_activity_data_in_tab_txt"
+                            android:paddingLeft="16dp"
+                            android:textStyle="italic"
+                            android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                            android:text="Ten miesiąc:"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/main_activity_data_in_tab_txt"
+                            android:paddingLeft="16dp"
+                            android:text="Paliwo"
+                            android:paddingTop="@dimen/main_activity_tv_padding_top"
+                            android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                            android:gravity="left"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/main_activity_data_in_tab_txt"
+                            android:paddingLeft="16dp"
+                            android:text="Inne koszty"
+                            android:gravity="left"
+                            android:paddingTop="@dimen/main_activity_tv_padding_top"
+                            android:paddingBottom="@dimen/main_activity_tv_padding_bottom" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/main_activity_data_in_tab_txt"
+                            android:paddingLeft="16dp"
+                            android:text="Poprzedni miesiąc:"
+                            android:textStyle="italic"
+                            android:paddingTop="@dimen/main_activity_tv_padding_top"
+                            android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                            android:gravity="left"
+                            android:id="@+id/textView5" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/main_activity_data_in_tab_txt"
+                            android:paddingLeft="16dp"
+                            android:text="Paliwo"
+                            android:paddingTop="@dimen/main_activity_tv_padding_top"
+                            android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                            android:gravity="left"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/main_activity_data_in_tab_txt"
+                            android:paddingLeft="16dp"
+                            android:text="Inne koszty"
+                            android:paddingTop="@dimen/main_activity_tv_padding_top"
+                            android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                            android:gravity="left"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/statistic_separate_line" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/main_activity_data_in_tab_txt"
+                            android:paddingLeft="16dp"
+                            android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                            android:visibility="invisible"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/main_activity_data_in_tab_txt"
+                            android:paddingRight="16dp"
+                            android:text="100 zł"
+                            android:gravity="right"
+                            android:paddingTop="@dimen/main_activity_tv_padding_top"
+                            android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                            android:id="@+id/main_activ_fuel_this_mth" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/main_activity_data_in_tab_txt"
+                            android:paddingRight="16dp"
+                            android:text="100 zł"
+                            android:gravity="right"
+                            android:paddingTop="@dimen/main_activity_tv_padding_top"
+                            android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                            android:id="@+id/main_activ_costs_this_mth"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/main_activity_data_in_tab_txt"
+                            android:paddingRight="16dp"
+                            android:text=""
+                            android:gravity="right"
+                            android:paddingTop="@dimen/main_activity_tv_padding_top"
+                            android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                            android:id="@+id/textView7" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/main_activity_data_in_tab_txt"
+                            android:paddingRight="16dp"
+                            android:text="100 zł"
+                            android:gravity="right"
+                            android:paddingTop="@dimen/main_activity_tv_padding_top"
+                            android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                            android:id="@+id/main_activ_fuel_last_mth"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/main_activity_data_in_tab_txt"
+                            android:paddingRight="16dp"
+                            android:text="100 zł"
+                            android:gravity="right"
+                            android:paddingTop="@dimen/main_activity_tv_padding_top"
+                            android:paddingBottom="@dimen/main_activity_tv_padding_bottom"
+                            android:id="@+id/main_activ_costs_last_mth"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/statistic_separate_line" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Więcej"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/main_activity_button_txt"
+                    android:id="@+id/main_activ_costs_button"
+                    style="@style/Base.Widget.AppCompat.Button.Borderless"
+                    android:layout_gravity="left"/>
+
+
+            </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fab_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        fab:menu_animationDelayPerItem="55"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_colorNormal="#da3c2f"
+        fab:menu_colorPressed="#dc4b3f"
+        fab:menu_colorRipple="#99d4d4d4"
+        fab:menu_fab_size="normal"
+        fab:menu_icon="@drawable/fab_add"
+        fab:menu_labels_colorNormal="#333"
+        fab:menu_labels_colorPressed="#444"
+        fab:menu_labels_colorRipple="#66efecec"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_position="left"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="#f2f1f1"
+        fab:menu_labels_textSize="15sp"
+        fab:menu_openDirection="up"
+        fab:menu_shadowColor="#66000000"
+        fab:menu_shadowRadius="2dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="2dp"
+        fab:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_menu_button3_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_notifications_white_24dp"
+            fab:fab_label="@string/fab_menu_btn3_PL"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_menu_button2_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_attach_money_white_24dp"
+            fab:fab_label="@string/fab_menu_btn2_PL"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_menu_button1_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_local_gas_station_white_24dp"
+            fab:fab_label="@string/fab_menu_btn_PL"
+            fab:fab_size="mini" />
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+</android.support.design.widget.CoordinatorLayout>

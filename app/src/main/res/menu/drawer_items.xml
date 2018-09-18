@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group
+        android:id="@+id/menu_main"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_menu_main"
+            android:icon="@drawable/ic_apps_black_36dp"
+            android:title="Strona główna" />
+    </group>
+
+    <group
+        android:id="@+id/menu_refuel"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_menu_refuel_list"
+            android:icon="@drawable/ic_list_black_36dp"
+            android:title="Dziennik tankowań" />
+        <item
+            android:id="@+id/drawer_menu_add_refuel"
+            android:icon="@drawable/ic_add_black_36dp"
+            android:title="Dodaj tankowanie" />
+
+    </group>
+
+    <group
+        android:id="@+id/menu_costs"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_menu_costs_list"
+            android:icon="@drawable/ic_list_black_36dp"
+            android:title="Dziennik kosztów" />
+        <item
+            android:id="@+id/drawer_menu_add_cost"
+            android:icon="@drawable/ic_add_black_36dp"
+            android:title="Dodaj koszt" />
+
+    </group>
+
+    <group
+        android:id="@+id/menu_stats_charts"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/drawer_menu_stats"
+            android:icon="@drawable/ic_equalizer_black_36dp"
+            android:title="Statystyki" />
+
+        <item
+            android:id="@+id/drawer_menu_charts"
+            android:icon="@drawable/ic_timeline_black_36dp"
+            android:title="Wykresy" />
+
+
+        </group>
+
+    <group
+        android:id="@+id/menu_settings"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_menu_settings_reminders"
+            android:icon="@drawable/ic_notifications_black_36dp"
+            android:title="Powiadomienia" />
+
+        <item
+            android:id="@+id/drawer_menu_settings_cars"
+            android:icon="@drawable/ic_directions_car_black_36dp"
+            android:title="Pojazdy" />
+        <item
+            android:id="@+id/drawer_menu_settings"
+            android:icon="@drawable/ic_settings_black_36dp"
+            android:title="Ustawienia" />
+
+        <item
+            android:id="@+id/drawer_menu_about"
+            android:icon="@drawable/ic_info_outline_black_36dp"
+            android:title="O aplikacji" />
+    </group>
+
+</menu>

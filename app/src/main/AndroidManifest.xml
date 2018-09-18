@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pietrzyk.sqlite1">
+
+    <uses-permission android:name="com.android.alarm.premission.SET_ALARM" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/fuelmate_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RefuelNewActivity"
+            android:label=""></activity>
+        <activity android:name=".RefuelListActivity" />
+        <activity
+            android:name=".RefuelUpdateActivity"
+            android:label="@string/title_activity_update_refuel"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".CostNewActivity"
+            android:label="@string/title_activity_new_cost"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".CostListActivity"
+            android:label="@string/title_activity_cost_list"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".CostUpdateActivity"
+            android:label="@string/title_activity_cost_update"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".CarNewActivity" />
+        <activity
+            android:name=".CarListActivity"
+            android:label="@string/title_activity_car_list"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ChartBarActivity"
+            android:label="@string/title_activity_chart_line_activity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".CarUpdateActivity" />
+        <activity
+            android:name=".StatisticsActivity"
+            android:label="@string/title_activity_statistics"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ChartLineActivity" />
+        <activity
+            android:name=".ChartsAcivity"
+            android:label="@string/title_activity_charts_acivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ReminderNewActivity" />
+        <activity
+            android:name=".ReminderListActivity"
+            android:parentActivityName=".ReminderNewActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ReminderNewActivity" />
+        </activity>
+
+        <receiver
+            android:name=".AlarmReciver"
+            android:enabled="true" />
+
+        <activity android:name=".LicensesActivity" />
+        <activity android:name=".WelcomeActivity"></activity>
+    </application>
+
+</manifest>

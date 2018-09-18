@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/welcome_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/welcome_screen">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginTop="52dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:textSize="24sp"
+            android:text="Witaj w FuelMate!"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginTop="52dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:text="Teraz w prosty i szybki sposób możesz kontrolować swoje wydatki związane z eksploatacją pojazdów."/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="370dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:src="@drawable/welcome_screen_big"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="14sp"
+            android:text="Dla dowolnej liczby pojazdów o dowolnej porze.\nWystarczy, że dodasz pojazd i możesz zaczynać.\nPowodzenia!"/>
+
+         <Button
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             style="@style/Base.Widget.AppCompat.Button.Borderless"
+             android:textColor="@color/white"
+             android:layout_gravity="right"
+             android:onClick="welcome_next"
+             android:text="Dalej"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8sp"
+                android:textColor="@color/white"
+                android:paddingLeft="2dp"
+                android:text="Designed by Dooder / Freepik"/>
+
+    </LinearLayout>
+</ScrollView>
